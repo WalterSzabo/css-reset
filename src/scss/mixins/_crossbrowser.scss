@@ -1,0 +1,6 @@
+/* @include crossbrowser(display, flex); */
+@mixin crossbrowser($name, $value) {
+	@each $vendor in ('', '-moz-', '-webkit-', '-ms-', '-o-') {
+		#{$vendor}#{$name}: #{$value};
+	}
+}
